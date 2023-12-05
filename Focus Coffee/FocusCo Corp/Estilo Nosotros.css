@@ -1,0 +1,17 @@
+h2{
+    background-color: rgb(12, 82, 47);
+    background-size: 50px;
+    border-radius: 40px;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-family: Lato;
+    padding: 15px;
+}
+p{
+    border: 3px solid rgb(12, 82, 47);
+    text-align: justify;
+    font-size: 15px;
+    padding: 50px;
+    line-height: 2.5;
+}

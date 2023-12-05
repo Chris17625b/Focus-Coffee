@@ -1,0 +1,48 @@
+h2{
+    font-family: normal;
+    font-size: 40px;
+    text-align: center;
+    color:black;
+}
+
+button{
+    background-color:  rgb(12, 82, 47);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form{
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgb(12, 82, 47);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+label{
+    font-family: normal;
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 12px;
+}
+
+input, textarea{
+    font-family: normal;
+    font-size: 20px;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: #b86832;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}

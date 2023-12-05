@@ -1,0 +1,243 @@
+/*--------------Estilo de la barra y secciones--------------------*/
+@font-face {
+  font-family: Lato;
+  src: url('Lato/Lato-Black.ttf'), url('Lato/Lato-BlackItalic.ttf'), url('Lato/Lato-Bold.ttf'),
+    url('Lato/Lato-BoldItalic.ttf'), url('Lato/Lato-Italic.ttf'),
+    url('Lato/Lato-Light.ttf'),url('Lato/Lato-LightItalic.ttf'),
+    url('Lato/Lato-Regular.ttf'),url('Lato/Lato-Thin.ttf'),
+    url('Lato/Lato-ThinItalic.ttf');
+}
+body
+{
+  font-size: 15px;
+  font-weight: 100px;
+  font-family: Lato;
+}
+html, body {
+  
+    background-color: rgb(255, 255, 255);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+  }
+
+
+  .Buscador input{
+    position: relative;
+    width: 210px;
+    padding: 1px;
+  }
+
+  body{
+    font-style: normal;
+  }
+  nav{
+    background: rgb(12, 82, 47);
+    height: 95px;
+    width: 100%;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 80px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background:  #b86832;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #502c2c;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #582c0f;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  section{
+    background: url(Background.PNG) no-repeat;
+    background-size: 1366px 768px;
+    height: calc(100vh - 100px);
+  }
+
+  li {
+    list-style-type: none;
+    margin-left: 3rem;
+}
+
+li > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+li::after {
+    content: '';
+    width: 0rem;
+    height: 0.15rem;
+    background-color: #b86832;
+    display: block;
+    border-radius: 0.2rem;
+    margin: 0.2rem auto 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+li:hover::after {
+    width: 2rem;
+}
+
+/*---------------Para bajar el boton principal------------------*/
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+button{
+  border:none;
+  border-radius:5px;
+  padding:25px 60px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+button:hover{
+  background-color:rgb(255, 198, 93);
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  overflow: auto;
+  background-color:#fff;
+  border-radius:5px;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown-options a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding:20px 49.5px;
+}
+
+.dropdown-options a:hover {
+  color: #ffffff;
+  background-color: #b86832;
+  border-radius:10px;
+}
+/*-------------Barra de noticias---------------------*/
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+  overflow: hidden; /* HIDE SCROLL BAR */
+  background: rgb(12, 82, 47);
+}
+ 
+/* (B) MOVING TICKER WRAPPER */
+.hmove { display: flex; }
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+}
+ 
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes tickerh {
+  0% { transform: translate3d(100%, 0, 0); }
+  100% { transform: translate3d(-400%, 0, 0); }
+}
+.hmove { animation: tickerh linear 30s infinite; }
+.hmove:hover { animation-play-state: running; }
+
+
+
+
+/*----Footer------*/
+footer{
+  display: flex;
+  text-align:center;
+  background-color:rgb(12, 82, 47);
+  color: black;
+  border-collapse: separate;
+  border-spacing: 25px;
+  padding: 10px;
+}
+
+footer > * {
+  font-size: 15px;
+  margin: 25px;
+}
